@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+   <head>
+      <meta charset="UTF-8">
+      <link rel="stylesheet" href="algoritm.css">
+   </head>
+   <body>
+    <header>
+         <nav>
+        <ul>
+     <li><a href="index.html">Паспорт</a></li>
+     <li><a href="algoritm.html" class="active">Алгоритм</a></li>
+     <li><a href="DOM.html">Считываем информацию из DOM</a></li>
+        </ul>
+    </nav>
+    </header>
+    <p>Условие алгоритмической задачи: Дано вещественное число A. Вычислить x = 0 при a > 100; x = a при a < 61, в противном случае x = a**4</p>
+ <form>
+        <label for="a">Введите число A:</label>
+        <input type="number" id="a" step="any">
+        <br><br>
+        
+        <button type="button" onclick="calculate()">Вычислить X</button>
+        <br><br>
+        
+        <label for="result">Результат (X):</label>
+        <input type="text" id="result" readonly>
+        <br><br>
+        
+        <button type="button" onclick="sendToServer()">Отправить на сервер</button>
+    </form>
+
+    <script>
+        let currentX = null;
+        
+        function calculate() {
+            let a = parseFloat(document.getElementById("a").value);
+            
+            if (a > 100) {
+                currentX = 0;
+            } else if (a < 61) {
+                currentX = a;
+            } else {
+                currentX = a ** 4;
+            }
+            
+            document.getElementById("result").value = currentX;
+        }
+        function sendToServer() {
+        let a = document.getElementById("a").value;
+        
+        if (currentX === null) {
+            alert("Сначала вычислите X!");
+            return;
+        }
+        
+        let url = 'https://yandex.ru/search/touch/?task=Определение_значения_x_при_a=' + a +
+                 '&condition=if_a>100_x=0_else_if_a<61_x=a_else_x=a4' +
+                 '&result_x=' + currentX;
+        
+        window.open(url, '_blank');
+    }
+</script>
+   </body>
+</html>

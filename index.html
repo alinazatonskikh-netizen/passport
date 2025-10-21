@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+   <head>
+      <meta charset="UTF-8">
+    <link rel="stylesheet" href="passport.css">
+     <link rel = "preconnect" href = "https://fonts.googleapis.com">
+    <link rel = "preconnect" href = "https://fonts.gstatic.com" cressorigin>
+    <link href = "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@100;200;300;400;500;600;700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=PT+Sans+Caption:wght@400;700&family=Poiret+One&diplay=swap" rel="stylesheet">
+   <style>
+
+   </style>
+   </head>
+   <body>
+<header>
+    <nav>
+        <ul>
+     <li><a href="index.html" class="active">Паспорт</a></li>
+     <li><a href="algoritm.html">Алгоритм</a></li>
+     <li><a href="DOM.html">Считываем информацию из DOM</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="passport-container">
+
+     <h1 id = "passport" >Паспорт</h1>
+        <div id = "main_fon"> 
+            <h5 id = "pass_title" class = "poiret-one-regular">РОССИЙСКАЯ ФЕДЕРАЦИЯ</h5>
+            <div id = "page_top">
+                <p class = "vidanstr1" id="issued"> УМВД России </p>
+                <p class = "vidanstr2" > <span id="area">По Липецкой области</span></p>
+                <p class = "vidanstrdata" id="date" >09.04.1999</p>
+                <p class = "vidanstrcode" id="subdivision code">728-631</p>
+                <img src="подпись2.png" alt="signature" class="signature">
+                <img src="подпись майнор.png" alt="my-signature" class="my-signature">
+            </div>
+
+            <div id = "page_bottom">
+                <p class = "hfamilia"> <span id="surname">Затонских</span></p>
+                <p class = "hname"> <span id="name">Алина</span></p>
+                <p class = "hfname"> <span id="patronymic">Романовна</span></p>
+                <p class = "hpol"><span id="gender">ЖЕН.</span></p>
+                <p class = "hborn" id="date">18.07.2006</p>
+                <p class = "hpborn1" id="town"> г. Липецк</p>
+                <p class = "hpborn2" id="region">Липецкой области</p>
+                <img src="Кошка на паспорт.jpg" alt="passport-photo" class="passport-photo">
+            </div> 
+        </div>
+</div>
+
+        <button id="change" class="change">Click to show English version</button>
+         
+    <script src="passport.js"></script>
+    </body>
+</html>
